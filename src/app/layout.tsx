@@ -4,9 +4,15 @@ import { WalletProvider } from "@/components/providers/WalletProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 
+
 export const metadata: Metadata = {
   title: "Deriverse Analytics - Trading Dashboard",
   description: "Professional trading journal and portfolio analysis for Deriverse traders",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
