@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { WalletProvider } from "@/components/providers/WalletProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Deriverse Analytics - Trading Dashboard",
@@ -26,6 +27,7 @@ export default function RootLayout({
             {children}
           </WalletProvider>
         </ThemeProvider>
+        <Analytics/>
       </body>
     </html>
   );
