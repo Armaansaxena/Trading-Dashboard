@@ -347,15 +347,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Phase 4 Complete Notice */}
-        <div className="mt-8 bg-profit/10 border border-profit/20 rounded-lg p-6 text-center">
-          <h3 className="text-lg font-semibold text-profit mb-2">
-            🎉 All Features Complete!
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Comprehensive analytics dashboard with journal, advanced charts, fee analysis, and time-based performance tracking. Ready for submission!
-          </p>
-        </div>
       </div>
     </main>
   )
