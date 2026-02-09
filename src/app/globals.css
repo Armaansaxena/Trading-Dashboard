@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
-    /* Light mode colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -27,7 +27,6 @@
   }
 
   .dark {
-    /* Dark mode colors */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -50,99 +49,60 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+/* Profit/Loss Colors */
+.text-profit {
+  color: #10b981;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.text-loss {
+  color: #ef4444;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-muted;
+.bg-profit {
+  background-color: #10b981;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-muted-foreground/30 rounded-md;
+.bg-loss {
+  background-color: #ef4444;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-muted-foreground/50;
+/* Wallet Adapter Styles */
+.wallet-adapter-button {
+  background-color: hsl(var(--foreground)) !important;
+  color: hsl(var(--background)) !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem 1rem !important;
+  height: auto !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s !important;
 }
 
-/* Profit/Loss colors */
-.profit {
-  @apply text-profit;
+.wallet-adapter-button:hover:not([disabled]) {
+  background-color: hsl(var(--foreground) / 0.9) !important;
 }
 
-.loss {
-  @apply text-loss;
+.wallet-adapter-modal-wrapper {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(4px) !important;
 }
 
-.profit-bg {
-  @apply bg-profit/10;
+.wallet-adapter-modal {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 0.5rem !important;
 }
 
-.loss-bg {
-  @apply bg-loss/10;
+.wallet-adapter-modal-title {
+  color: hsl(var(--foreground)) !important;
 }
 
-/* Chart animations */
-.recharts-surface {
-  @apply transition-all duration-300;
+.wallet-adapter-modal-list-item {
+  background-color: transparent !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 0.375rem !important;
 }
 
-/* Custom animations */
-@keyframes pulse-profit {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes pulse-loss {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse-profit {
-  animation: pulse-profit 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-.animate-pulse-loss {
-  animation: pulse-loss 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Loading skeleton */
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-.skeleton {
-  animation: shimmer 2s infinite linear;
-  background: linear-gradient(
-    to right,
-    hsl(var(--muted)) 0%,
-    hsl(var(--muted-foreground) / 0.1) 50%,
-    hsl(var(--muted)) 100%
-  );
-  background-size: 1000px 100%;
+.wallet-adapter-modal-list-item:hover {
+  background-color: hsl(var(--muted)) !important;
 }
