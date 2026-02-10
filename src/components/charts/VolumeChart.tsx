@@ -12,6 +12,8 @@ interface VolumeChartProps {
 }
 
 export function VolumeChart({ data, height = 300 }: VolumeChartProps) {
+
+  const responsiveHeight = typeof window !== 'undefined' && window.innerWidth < 640 ? 250 : height;
   
   const chartData = useMemo(() => {
     return data.map(item => ({
@@ -49,7 +51,7 @@ export function VolumeChart({ data, height = 300 }: VolumeChartProps) {
 
   return (
     <div className="w-full">
-      <ResponsiveContainer width="100%" height={height}>
+      <ResponsiveContainer width="100%" height={responsiveHeight}>
         <BarChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.3} />
           <XAxis 

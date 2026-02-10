@@ -19,6 +19,7 @@ export function PnLChart({
   showCumulative = true,
   height = 300 
 }: PnLChartProps) {
+  const responsiveHeight = typeof window !== 'undefined' && window.innerWidth < 640 ? 250 : height;
   
   const chartData = useMemo(() => {
     return data.map(item => ({
@@ -52,7 +53,7 @@ export function PnLChart({
 
   return (
     <div className="w-full">
-      <ResponsiveContainer width="100%" height={height}>
+      <ResponsiveContainer width="100%" height={responsiveHeight}>
         <ChartComponent data={chartData}>
           <defs>
             <linearGradient id="colorPnL" x1="0" y1="0" x2="0" y2="1">

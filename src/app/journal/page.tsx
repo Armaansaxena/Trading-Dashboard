@@ -109,9 +109,9 @@ export default function JournalPage() {
     <main className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+            <div className="flex items-center gap-2 sm:gap-4">
               <Link 
                 href="/"
                 className="p-2 hover:bg-muted rounded-lg transition-colors"
@@ -119,28 +119,30 @@ export default function JournalPage() {
                 <ArrowLeft className="h-5 w-5" />
               </Link>
               <div>
-                <h1 className="text-2xl font-bold">Trading Journal</h1>
-                <p className="text-sm text-muted-foreground">
+                <h1 className="text-xl sm:text-2xl font-bold">Trading Journal</h1>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   {filteredTrades.length} trades
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
               <ThemeToggle />
-              <WalletButton/>
+              <WalletButton />
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 border border-border rounded-md hover:bg-muted transition-colors"
+                className="flex items-center gap-2 px-3 sm:px-4 py-2 text-sm border border-border rounded-md hover:bg-muted transition-colors"
               >
                 <Filter className="h-4 w-4" />
-                {showFilters ? 'Hide' : 'Show'} Filters
+                <span className="hidden sm:inline">{showFilters ? 'Hide' : 'Show'} Filters</span>
+                <span className="sm:hidden">Filters</span>
               </button>
               <button
                 onClick={handleExport}
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                className="flex items-center gap-2 px-3 sm:px-4 py-2 text-sm bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
               >
                 <Download className="h-4 w-4" />
-                Export CSV
+                <span className="hidden sm:inline">Export CSV</span>
+                <span className="sm:hidden">Export</span>
               </button>
             </div>
           </div>
@@ -148,7 +150,9 @@ export default function JournalPage() {
       </header>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+
+      
         
         {/* Filters */}
         {showFilters && (

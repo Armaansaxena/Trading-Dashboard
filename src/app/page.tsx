@@ -52,30 +52,31 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-8 py-4">
-          <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
             <div>
-              <h1 className="text-2xl font-bold">Deriverse Analytics</h1>
-              <p className="text-sm text-muted-foreground">
+              <h1 className="text-xl sm:text-2xl font-bold">Deriverse Analytics</h1>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 Professional Trading Journal & Portfolio Analysis
               </p>
             </div>
-            <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <Link 
-              href="/journal"
-              className="px-4 py-2 border border-border rounded-md hover:bg-muted transition-colors"
-            >
-              View Journal
-            </Link>
-            <WalletButton />
-          </div>
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <ThemeToggle />
+              <Link 
+                href="/journal"
+                className="px-3 sm:px-4 py-2 text-sm border border-border rounded-md hover:bg-muted transition-colors whitespace-nowrap"
+              >
+                View Journal
+              </Link>
+              <WalletButton />
+            </div>
           </div>
         </div>
       </header>
 
+      
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8"> 
         
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

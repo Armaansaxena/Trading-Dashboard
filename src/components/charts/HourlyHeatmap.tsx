@@ -36,9 +36,9 @@ export function HourlyHeatmap({ data }: HourlyHeatmapProps) {
   }
 
   return (
-    <div className="w-full overflow-x-auto">
-      <div className="min-w-[800px]">
-        <div className="grid grid-cols-12 gap-2">
+    <div className="w-full overflow-x-auto pb-4">
+      <div className="min-w-[800px] sm:min-w-0">
+        <div className="grid grid-cols-6 sm:grid-cols-12 gap-2">
           {data.map((hour) => (
             <div
               key={hour.hour}
@@ -93,7 +93,7 @@ export function HourlyHeatmap({ data }: HourlyHeatmapProps) {
         </div>
         
         {/* Legend */}
-        <div className="mt-6 flex items-center justify-center gap-8">
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 bg-profit opacity-80 rounded"></div>
             <span className="text-xs text-muted-foreground">Profitable Hours</span>

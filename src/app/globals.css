@@ -106,3 +106,55 @@
 .wallet-adapter-modal-list-item:hover {
   background-color: hsl(var(--muted)) !important;
 }
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Smaller padding on mobile */
+  .wallet-adapter-button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Better spacing for cards */
+  .bg-card {
+    padding: 1rem !important;
+  }
+
+  /* Adjust chart heights on mobile */
+  .recharts-responsive-container {
+    min-height: 200px !important;
+  }
+}
+
+/* Better scrollbar on mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Better table overflow on mobile */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.875rem;
+  }
+  
+  th, td {
+    padding: 0.5rem !important;
+  }
+}
