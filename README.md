@@ -11,7 +11,7 @@
 
 A full-featured trading dashboard designed to help traders **analyze performance, track metrics, and optimize strategies** using real-time data and advanced visualizations.
 
-[🔗 Live Demo](#) • [🐛 Report Bug](https://github.com/Armaansaxena/Trading-Dashboard/issues) • [✨ Request Feature](https://github.com/Armaansaxena/Trading-Dashboard/issues)
+[🔗 Live Demo](https://trading-dashboard-nine-fawn.vercel.app/) • [🐛 Report Bug](https://github.com/Armaansaxena/Trading-Dashboard/issues) • [✨ Request Feature](https://github.com/Armaansaxena/Trading-Dashboard/issues)
 
 </div>
 
